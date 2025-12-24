@@ -29,7 +29,7 @@
 <link href="css/swiper.css" rel="stylesheet">
 <link href="css/magnific-popup.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-    <link rel="icon" href="images/rlife.png">
+<link rel="icon" href="images/rlife.png">
 <style>
     /* Tối ưu hiệu suất */
     * {
@@ -50,274 +50,9 @@
     .card, .nav-link, .btn {
         will-change: transform;
     }
-
-    /* ========== HIỆU ỨNG TẾT 2025 ========== */
-    
-    /* Banner Chúc Mừng Năm Mới */
-    .tet-banner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, #dc143c 0%, #ff4500 50%, #ffd700 100%);
-        color: white;
-        text-align: center;
-        padding: 15px;
-        font-size: 1.5em;
-        font-weight: bold;
-        z-index: 10000;
-        box-shadow: 0 4px 20px rgba(220, 20, 60, 0.5);
-        animation: bannerPulse 2s ease-in-out infinite;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    
-    @keyframes bannerPulse {
-        0%, 100% { transform: scaleY(1); }
-        50% { transform: scaleY(1.05); }
-    }
-
-    /* Pháo hoa */
-    .firework {
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-    }
-
-    /* Tuyết rơi / Confetti */
-    .snowflake, .confetti {
-        position: fixed;
-        color: #ffd700;
-        font-size: 1.5em;
-        pointer-events: none;
-        z-index: 9998;
-        animation: fall linear infinite;
-    }
-
-    .confetti {
-        width: 10px;
-        height: 10px;
-        background: #dc143c;
-        border-radius: 50%;
-    }
-
-    .confetti:nth-child(2n) {
-        background: #ffd700;
-    }
-
-    .confetti:nth-child(3n) {
-        background: #ff4500;
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    /* Hiệu ứng ánh sáng lấp lánh */
-    .sparkle {
-        position: fixed;
-        width: 6px;
-        height: 6px;
-        background: #ffd700;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9997;
-        box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
-        animation: sparkleAnim 2s ease-in-out infinite;
-    }
-
-    @keyframes sparkleAnim {
-        0%, 100% {
-            opacity: 0;
-            transform: scale(0);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    /* Hiệu ứng Rồng bay */
-    .dragon {
-        position: fixed;
-        font-size: 3em;
-        pointer-events: none;
-        z-index: 9996;
-        animation: dragonFly 15s linear infinite;
-        opacity: 0.7;
-    }
-
-    @keyframes dragonFly {
-        0% {
-            left: -100px;
-            top: 20%;
-        }
-        50% {
-            top: 10%;
-        }
-        100% {
-            left: 100vw;
-            top: 30%;
-        }
-    }
-
-    /* Lì xì rơi */
-    .lixi {
-        position: fixed;
-        width: 60px;
-        height: 80px;
-        background: linear-gradient(135deg, #dc143c 0%, #ff0000 100%);
-        border: 3px solid #ffd700;
-        border-radius: 5px;
-        pointer-events: none;
-        z-index: 9995;
-        animation: lixiFall 8s linear infinite;
-        box-shadow: 0 4px 15px rgba(220, 20, 60, 0.6);
-    }
-
-    .lixi::before {
-        content: '💰';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.5em;
-    }
-
-    @keyframes lixiFall {
-        0% {
-            transform: translateY(-100px) rotate(0deg);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    /* Hiệu ứng màu Tết cho các nút */
-    .btn-danger {
-        background: linear-gradient(135deg, #dc143c 0%, #ff4500 100%) !important;
-        box-shadow: 0 4px 15px rgba(220, 20, 60, 0.6), 0 0 20px rgba(255, 215, 0, 0.4) !important;
-        animation: btnGlow 2s ease-in-out infinite;
-    }
-
-    @keyframes btnGlow {
-        0%, 100% {
-            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-        50% {
-            box-shadow: 0 4px 25px rgba(220, 20, 60, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
-        }
-    }
-
-    /* Hiệu ứng cho header */
-    .header {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 80%, rgba(220, 20, 60, 0.1) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: 1;
-        animation: headerGlow 3s ease-in-out infinite;
-    }
-
-    @keyframes headerGlow {
-        0%, 100% {
-            opacity: 0.5;
-        }
-        50% {
-            opacity: 0.8;
-        }
-    }
-
-    /* Hiệu ứng cho card */
-    .card {
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 215, 0, 0.3);
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3), 0 0 20px rgba(220, 20, 60, 0.2);
-        border-color: #ffd700;
-    }
-
-    /* Hiệu ứng cho navbar */
-    .navbar-custom {
-        background: rgba(0, 0, 0, 0.3) !important;
-        backdrop-filter: blur(10px);
-    }
-
-    /* Màu Tết cho các tiêu đề */
-    h2, h3, h4 {
-        background: linear-gradient(135deg, #ffd700 0%, #ff4500 50%, #dc143c 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: textShine 3s ease-in-out infinite;
-    }
-
-    @keyframes textShine {
-        0%, 100% {
-            filter: brightness(1);
-        }
-        50% {
-            filter: brightness(1.3);
-        }
-    }
-
-    /* Body background với hiệu ứng Tết */
-    body {
-        position: relative;
-        overflow-x: hidden;
-    }
-
-    body::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
-            radial-gradient(circle at 90% 80%, rgba(220, 20, 60, 0.05) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: -1;
-        animation: bgPulse 4s ease-in-out infinite;
-    }
-
-    @keyframes bgPulse {
-        0%, 100% {
-            opacity: 0.5;
-        }
-        50% {
-            opacity: 0.8;
-        }
-    }
 </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false;">
-<!-- Banner Chúc Mừng Năm Mới -->
-<div class="tet-banner">
-    🐉 CHÚC MỪNG NĂM MỚI 2025 - NĂM ẤT TỴ 🐉 | 🎊 XUÂN VỀ - PHÚC LỘC ĐẦY NHÀ 🎊
-</div>
-
 <audio preload="none" hidden="true" loop="true">
 <source src="images/music.mp3" type="audio/mp3">
 </audio>
@@ -387,35 +122,20 @@
 </div>
 </div>
 </header>
-<div class="download-section" style="background: linear-gradient(135deg, #1a0000 0%, #2d1b1b 50%, #1a0000 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
-<!-- Hiệu ứng nền Tết -->
-<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%); pointer-events: none; animation: pulseBg 3s ease-in-out infinite;"></div>
-
-<div class="container" style="position: relative; z-index: 1;">
+<div class="download-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%); padding: 80px 0; text-align: center;">
+<div class="container">
 <div class="row">
 <div class="col-lg-12">
-<h2 style="color: #ffd700; font-size: 2.5em; margin-bottom: 20px; font-weight: bold; text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0,0,0,0.8); animation: titleGlow 2s ease-in-out infinite;">🎮 TẢI GAME NGAY 🎮</h2>
-<p style="color: #ffd700; font-size: 1.2em; margin-bottom: 40px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">🐉 Tham gia RLIFECITY Roleplay ngay hôm nay và trải nghiệm thế giới roleplay chân thực nhất! 🐉</p>
-<a href="https://cdn.discordapp.com/attachments/1384634181535142039/1400811204557017138/RLife.exe?ex=694d2818&is=694bd698&hm=8d333b7358b20f6571a472e23cdfd793e2186f532778d57298276afe3690a4bb&" target="_blank" class="btn btn-danger btn-lg" style="background: linear-gradient(135deg, #dc143c 0%, #ff4500 50%, #ffd700 100%); border: 3px solid #ffd700; padding: 15px 50px; font-size: 1.3em; font-weight: bold; border-radius: 10px; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0px 4px 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(220, 20, 60, 0.4); position: relative; overflow: hidden;">
-<span style="position: relative; z-index: 1;"><i class="fas fa-download" style="margin-right: 10px;"></i>Tải RLife.exe</span>
+<h2 style="color: white; font-size: 2.5em; margin-bottom: 20px; font-weight: bold;">TẢI GAME NGAY</h2>
+<p style="color: #ccc; font-size: 1.2em; margin-bottom: 40px;">Tham gia RLIFECITY Roleplay ngay hôm nay và trải nghiệm thế giới roleplay chân thực nhất!</p>
+<a href="https://cdn.discordapp.com/attachments/1384634181535142039/1400811204557017138/RLife.exe?ex=694d2818&is=694bd698&hm=8d333b7358b20f6571a472e23cdfd793e2186f532778d57298276afe3690a4bb&" target="_blank" class="btn btn-danger btn-lg" style="background-color: #ffd700; border: none; padding: 15px 50px; font-size: 1.3em; font-weight: bold; border-radius: 5px; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.4);">
+<i class="fas fa-download" style="margin-right: 10px;"></i>Tải RLife.exe
 </a>
-<p style="color: #ffd700; font-size: 0.9em; margin-top: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">✨ Phiên bản mới nhất - Hoàn toàn miễn phí ✨</p>
+<p style="color: #999; font-size: 0.9em; margin-top: 20px;">Phiên bản mới nhất - Hoàn toàn miễn phí</p>
 </div>
 </div>
 </div>
 </div>
-
-<style>
-@keyframes pulseBg {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.1); }
-}
-
-@keyframes titleGlow {
-    0%, 100% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0,0,0,0.8); }
-    50% { text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 40px rgba(220, 20, 60, 0.6), 2px 2px 4px rgba(0,0,0,0.8); }
-}
-</style>
 <div class="cards-1" style="background-color: #202020;">
 <div class="container">
 <div class="row">
@@ -429,8 +149,8 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
-<h2 style="position: relative;">🎊 TÍNH NĂNG 🎊</h2>
-<div class="p-heading p-large" style="color: #ffd700; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Đây là các tính năng mà chúng tôi dành cho bạn. 🎉</div>
+<h2>TÍNH NĂNG</h2>
+<div class="p-heading p-large">Đây là các tính năng mà chúng tôi dành cho bạn.</div>
 </div>
 </div>
 <div class="row">
@@ -584,21 +304,18 @@
 </div> 
 
 
-<div class="footer" style="background-image: url(images/header-background.jpg); position: relative; overflow: hidden;">
-<!-- Hiệu ứng nền Tết cho footer -->
-<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(220, 20, 60, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%); pointer-events: none;"></div>
-
-<div class="container" style="position: relative; z-index: 1;">
+<div class="footer" style="background-image: url(images/header-background.jpg);">
+<div class="container">
 <div class="row">
 <div class="col-md-12" style="text-align: center;">
 <div class="text-container">
-<h4 style="color: #ffd700; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">🎉 Thông Tin 🎉</h4>
+<h4>Thông Tin</h4>
 <ul class="list-unstyled li-space-lg" style="display: inline-block; text-align: left;">
 <li>
-<a class="white" href="../forum.dlrp.eu/index8feb.html?legal-notice/" style="color: #ffd700 !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); transition: all 0.3s ease;">Thông Tin Pháp Lý</a>
+<a class="white" href="../forum.dlrp.eu/index8feb.html?legal-notice/">Thông Tin Pháp Lý</a>
 </li>
 <li>
-<a class="white" href="../forum.dlrp.eu/indexd0fd.html?datenschutzerklaerung/" style="color: #ffd700 !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); transition: all 0.3s ease;">Chính Sách Bảo Mật</a>
+<a class="white" href="../forum.dlrp.eu/indexd0fd.html?datenschutzerklaerung/">Chính Sách Bảo Mật</a>
 </li>
 </ul>
 </div> 
@@ -608,14 +325,11 @@
 </div> 
 
 
-<div class="copyright" style="background: linear-gradient(135deg, #1a0000 0%, #2d1b1b 100%); position: relative; overflow: hidden;">
-<!-- Hiệu ứng nền -->
-<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%); pointer-events: none;"></div>
-
-<div class="container" style="position: relative; z-index: 1;">
+<div class="copyright">
+<div class="container">
 <div class="row">
 <div class="col-lg-12">
-<p class="p-small" style="color: #ffd700; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">🐉 Copyright © RLIFECITY Roleplay 2025 - Năm Ất Tỵ - All Rights Reserved 🐉</p>
+<p class="p-small">Copyright © RLIFECITY Roleplay 2025 - All Rights Reserved</p>
 </div> 
 </div> 
 </div> 
@@ -657,239 +371,7 @@
             return false;
         }
     }
-
-    // ========== HIỆU ỨNG TẾT 2025 ==========
-    
-    // Tạo pháo hoa
-    function createFirework(x, y) {
-        const colors = ['#ffd700', '#dc143c', '#ff4500', '#ff6347', '#ffa500'];
-        const particles = 30;
-        
-        for (let i = 0; i < particles; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'firework';
-            particle.style.left = x + 'px';
-            particle.style.top = y + 'px';
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
-            
-            const angle = (Math.PI * 2 * i) / particles;
-            const velocity = 3 + Math.random() * 2;
-            const vx = Math.cos(angle) * velocity;
-            const vy = Math.sin(angle) * velocity;
-            
-            document.body.appendChild(particle);
-            
-            let px = x;
-            let py = y;
-            let opacity = 1;
-            
-            const animate = () => {
-                px += vx;
-                py += vy;
-                opacity -= 0.02;
-                
-                particle.style.left = px + 'px';
-                particle.style.top = py + 'px';
-                particle.style.opacity = opacity;
-                
-                if (opacity > 0) {
-                    requestAnimationFrame(animate);
-                } else {
-                    particle.remove();
-                }
-            };
-            
-            animate();
-        }
-    }
-
-    // Tạo pháo hoa ngẫu nhiên
-    setInterval(() => {
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * (window.innerHeight * 0.5);
-        createFirework(x, y);
-    }, 2000);
-
-    // Tạo tuyết rơi / confetti
-    function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.className = 'snowflake';
-        snowflake.innerHTML = ['❄', '✨', '🎊', '🎉', '⭐'][Math.floor(Math.random() * 5)];
-        snowflake.style.left = Math.random() * 100 + '%';
-        snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        snowflake.style.animationDelay = Math.random() * 2 + 's';
-        document.body.appendChild(snowflake);
-        
-        setTimeout(() => snowflake.remove(), 5000);
-    }
-
-    // Tạo confetti
-    function createConfetti() {
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + '%';
-        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        confetti.style.animationDelay = Math.random() * 2 + 's';
-        document.body.appendChild(confetti);
-        
-        setTimeout(() => confetti.remove(), 5000);
-    }
-
-    // Tạo nhiều tuyết và confetti
-    setInterval(() => {
-        createSnowflake();
-        createConfetti();
-    }, 300);
-
-    // Tạo ánh sáng lấp lánh
-    function createSparkle() {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.left = Math.random() * 100 + '%';
-        sparkle.style.top = Math.random() * 100 + '%';
-        sparkle.style.animationDelay = Math.random() * 2 + 's';
-        document.body.appendChild(sparkle);
-        
-        setTimeout(() => sparkle.remove(), 2000);
-    }
-
-    setInterval(createSparkle, 500);
-
-    // Tạo Rồng bay
-    function createDragon() {
-        const dragon = document.createElement('div');
-        dragon.className = 'dragon';
-        dragon.innerHTML = '🐉';
-        dragon.style.top = Math.random() * 50 + 10 + '%';
-        document.body.appendChild(dragon);
-        
-        setTimeout(() => dragon.remove(), 15000);
-    }
-
-    // Tạo rồng mỗi 20 giây
-    setInterval(createDragon, 20000);
-    createDragon(); // Tạo ngay lập tức
-
-    // Tạo lì xì rơi
-    function createLixi() {
-        const lixi = document.createElement('div');
-        lixi.className = 'lixi';
-        lixi.style.left = Math.random() * 100 + '%';
-        lixi.style.animationDuration = (Math.random() * 3 + 5) + 's';
-        document.body.appendChild(lixi);
-        
-        setTimeout(() => lixi.remove(), 8000);
-    }
-
-    setInterval(createLixi, 3000);
-
-    // Hiệu ứng khi click (pháo hoa)
-    document.addEventListener('click', (e) => {
-        createFirework(e.clientX, e.clientY);
-    });
-
-    // Hiệu ứng cho banner
-    const banner = document.querySelector('.tet-banner');
-    if (banner) {
-        setInterval(() => {
-            banner.style.transform = 'scaleY(1.05)';
-            setTimeout(() => {
-                banner.style.transform = 'scaleY(1)';
-            }, 200);
-        }, 2000);
-    }
-
-    // Thêm hiệu ứng cho các nút khi hover
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'all 0.3s ease';
-        });
-        
-        btn.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
-
-    // Hiệu ứng cho các card
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.borderColor = '#ffd700';
-            this.style.boxShadow = '0 10px 30px rgba(255, 215, 0, 0.3), 0 0 20px rgba(220, 20, 60, 0.2)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.borderColor = 'rgba(255, 215, 0, 0.3)';
-            this.style.boxShadow = '';
-        });
-    });
-
-    // Hiệu ứng cho các link trong footer
-    document.querySelectorAll('.footer a').forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.color = '#ff4500 !important';
-            this.style.textShadow = '0 0 10px rgba(255, 215, 0, 0.8), 1px 1px 2px rgba(0,0,0,0.8)';
-            this.style.transform = 'scale(1.1)';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.color = '#ffd700 !important';
-            this.style.textShadow = '1px 1px 2px rgba(0,0,0,0.8)';
-            this.style.transform = 'scale(1)';
-        });
-    });
-
-    // Thêm hiệu ứng cho nút download
-    const downloadBtn = document.querySelector('.download-section .btn');
-    if (downloadBtn) {
-        downloadBtn.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1) rotate(2deg)';
-            this.style.boxShadow = '0px 6px 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(220, 20, 60, 0.6)';
-        });
-        
-        downloadBtn.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotate(0deg)';
-            this.style.boxShadow = '0px 4px 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(220, 20, 60, 0.4)';
-        });
-    }
-
-    // Tạo hiệu ứng chữ "Chúc Mừng Năm Mới" bay
-    function createFloatingText() {
-        const texts = ['🎉', '🐉', '✨', '🎊', '💰', '🎁'];
-        const text = texts[Math.floor(Math.random() * texts.length)];
-        const floating = document.createElement('div');
-        floating.style.position = 'fixed';
-        floating.style.fontSize = '2em';
-        floating.style.pointerEvents = 'none';
-        floating.style.zIndex = '9999';
-        floating.style.left = Math.random() * 100 + '%';
-        floating.style.top = '100%';
-        floating.innerHTML = text;
-        floating.style.animation = 'floatUp 4s ease-out forwards';
-        document.body.appendChild(floating);
-        
-        setTimeout(() => floating.remove(), 4000);
-    }
-
-    // Thêm animation cho floating text
-    const style = document.createElement('style');
-    style.textContent += `
-        @keyframes floatUp {
-            to {
-                top: -10%;
-                opacity: 0;
-                transform: translateY(-100px) rotate(360deg);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Tạo floating text mỗi 5 giây
-    setInterval(createFloatingText, 5000);
-
-    console.log('🎉 Chúc Mừng Năm Mới 2025 - Năm Ất Tỵ! 🐉');
-    console.log('✨ Website đã được trang trí với nhiều hiệu ứng Tết! ✨');
+ 
 </script>
 </body>
 
